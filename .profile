@@ -6,8 +6,9 @@ export PATH=$PATH:/Users/itokosuke/.composer/vendor/bin/laravel
 export PATH=$PATH:/Users/itokosuke/.composer/vendor/bin
 export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
 export PATH=$PATH:/Users/itokosuke/study/grin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/itokosuke/.nodebrew/current/bin:/Users/itokosuke/.composer/vendor/bin/laravel:/Users/itokosuke/.composer/vendor/bin:/usr/local/opt/mysql@5.7/bin:/usr/X11R6/bin
-export PATH=$PATH:{HOME}/.rbenv/bin
+export PATH=$PATH:/Users/itokosuke/.rbenv/bin
 export PATH=$PATH:/Users/itokosuke/pear/bin
+export PATH=$PATH:/Users/itokosuke/.cargo/bin
 
 #--------------------------
 # PHP 開発用
