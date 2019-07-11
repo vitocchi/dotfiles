@@ -28,6 +28,7 @@ export PATH=$PATH:$HOME/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
 alias cdgo="cd $HOME/go/src/github.com/aerialpartners"
+alias initMakefile="wget https://raw.githubusercontent.com/vitocchi/go-makefile-temp/master/Makefile"
 
 #--------------------------
 #rbenv(Ruby)
@@ -72,3 +73,7 @@ function peco-ssh () {
 }
 zle -N peco-ssh
 bindkey '^s' peco-ssh
+
+#--------------------------
+#
+#--------------------------
