@@ -5,3 +5,4 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.vimrc.common ~/.vimrc.common
+ln -sf ~/dotfiles/.vimrc.neocomplete ~/.vimrc.neocomplete
