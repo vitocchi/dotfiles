@@ -27,6 +27,7 @@ export PATH=$PATH:$HOME/bin
 #--------------------------
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
+export GO111MODULE=on
 alias cdgo="cd $HOME/go/src/github.com/aerialpartners"
 alias initMakefile="wget https://raw.githubusercontent.com/vitocchi/go-makefile-temp/master/Makefile"
 

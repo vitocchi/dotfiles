@@ -79,3 +79,5 @@
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
+[url "ssh://git@github.com/<myorg>/"]
+	insteadOf = https://github.com/<myorg>/
