@@ -5,11 +5,12 @@ export PATH=$PATH:/Users/itokosuke/.nodebrew/current/bin
 export PATH=$PATH:/Users/itokosuke/.composer/vendor/bin/laravel
 export PATH=$PATH:/Users/itokosuke/.composer/vendor/bin
 export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
-export PATH=$PATH:/Users/itokosuke/study/grin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/itokosuke/.nodebrew/current/bin:/Users/itokosuke/.composer/vendor/bin/laravel:/Users/itokosuke/.composer/vendor/bin:/usr/local/opt/mysql@5.7/bin:/usr/X11R6/bin
+export PATH=$PATH:/Users/itokosuke/private/grin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/itokosuke/.nodebrew/current/bin:/Users/itokosuke/.composer/vendor/bin/laravel:/Users/itokosuke/.composer/vendor/bin:/usr/local/opt/mysql@5.7/bin:/usr/X11R6/bin
 export PATH=$PATH:/Users/itokosuke/.rbenv/bin
 export PATH=$PATH:/Users/itokosuke/pear/bin
 export PATH=$PATH:/Users/itokosuke/.cargo/bin
-
+export PATH=$PATH:/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/bin
+export PATH=$PATH:/usr/local/heroku/bin
 #--------------------------
 # PHP 開発用
 #--------------------------
@@ -76,5 +77,12 @@ zle -N peco-ssh
 bindkey '^s' peco-ssh
 
 #--------------------------
-#
+# nvim
 #--------------------------
+alias vi="nvim"
+alias vim="nvim"
+
+#--------------------------
+# atcoder
+#--------------------------
+alias initat="git clone https://github.com/vitocchi/atcoder-rust-temp.git"
