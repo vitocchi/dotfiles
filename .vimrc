@@ -83,27 +83,3 @@ autocmd FileType javascript setlocal sw=2 sts=2 ts=2 et
 
 source ~/.vimrc.common " そのたのvimバインディングエディタとの共通設定
 source ~/.vimrc.neocomplete "neocomplete用の設定
-
-
-function! ProfileCursorMove() abort
-  let profile_file = expand('~/log/vim-profile.log')
-  if filereadable(profile_file)
-    call delete(profile_file)
-  endif
-
-  normal! gg
-  normal! zR
-
-  execute 'profile start ' . profile_file
-  profile func *
-  profile file *
-
-  augroup ProfileCursorMove
-    autocmd!
-    autocmd CursorHold <buffer> profile pause | q
-  augroup END
-
-  for i in range(100)
-    call feedkeys('l')
-  endfor
-endfunction
