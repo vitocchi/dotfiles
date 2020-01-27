@@ -5,6 +5,7 @@ export PATH=$PATH:/Users/itokosuke/.nodebrew/current/bin
 export PATH=$PATH:/Users/itokosuke/.composer/vendor/bin/laravel
 export PATH=$PATH:/Users/itokosuke/.composer/vendor/bin
 export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
+export PATH=$PATH:/usr/local/opt/openssl@1.1/bin
 export PATH=$PATH:/Users/itokosuke/private/grin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/itokosuke/.nodebrew/current/bin:/Users/itokosuke/.composer/vendor/bin/laravel:/Users/itokosuke/.composer/vendor/bin:/usr/local/opt/mysql@5.7/bin:/usr/X11R6/bin
 export PATH=$PATH:/Users/itokosuke/.rbenv/bin
 export PATH=$PATH:/Users/itokosuke/pear/bin
@@ -86,3 +87,14 @@ alias vim="nvim"
 # atcoder
 #--------------------------
 alias initat="git clone https://github.com/vitocchi/atcoder-rust-temp.git"
+
+#--------------------------
+# global ip　確認
+#--------------------------
+alias myip="curl inet-ip.info"
+
+#--------------------------
+# pwgen
+# 大文字、小文字、数字、記号を含んだ12文字のパスワードを生成してクリップボードに保存する
+alias cpwgen="pwgen 12 -cny1 | pbcopy"
+#--------------------------

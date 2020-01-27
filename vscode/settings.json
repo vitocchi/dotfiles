@@ -1,0 +1,59 @@
+{
+    "editor.fontFamily": "Ricty,Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Monokai Classic",
+    "workbench.editor.enablePreview": false,
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+
+    // vim のキーマップ
+    "vim.insertModeKeyBindings": [
+        // jkでノーマルモードにエスケープしてほぞんする
+        {
+            "before": ["j","k"],
+            "after": ["<Esc>"],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    // leaderをスペースに設定する
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        // leader + w で保存
+        {
+            "before": ["leader","w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.incsearch": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[rust]": {
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "go.useLanguageServer": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "maven.terminal.useJavaHome": true,
+    "terminal.integrated.fontSize": 14,
+    "workbench.iconTheme": "Monokai Classic Icons",
+    "editor.minimap.enabled": false,
+    "search.location": "sidebar",
+    "vsicons.dontShowNewVersionMessage": true,
+}
