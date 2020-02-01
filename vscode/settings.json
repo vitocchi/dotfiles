@@ -45,6 +45,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "go.useLanguageServer": true,
+    "go.gopath": "/Users/itokosuke/go",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
@@ -56,4 +57,5 @@
     "editor.minimap.enabled": false,
     "search.location": "sidebar",
     "vsicons.dontShowNewVersionMessage": true,
+    "workbench.startupEditor": "newUntitledFile",
 }
