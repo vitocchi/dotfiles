@@ -55,7 +55,6 @@
     "terminal.integrated.fontSize": 14,
     "workbench.iconTheme": "Monokai Classic Icons",
     "editor.minimap.enabled": false,
-    "search.location": "sidebar",
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.startupEditor": "newUntitledFile",
 }

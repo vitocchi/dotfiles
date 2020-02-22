@@ -10,9 +10,7 @@ export PATH=$PATH:/Users/itokosuke/private/grin:/usr/local/bin:/usr/bin:/bin:/us
 export PATH=$PATH:/Users/itokosuke/.rbenv/bin
 export PATH=$PATH:/Users/itokosuke/pear/bin
 export PATH=$PATH:/Users/itokosuke/.cargo/bin
-export PATH=$PATH:/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/bin
 export PATH=$PATH:/usr/local/heroku/bin
-export PATH=$PATH:/Users/itokosuke/Library/Python/2.7/bin
 export PATH=$PATH:/Uers/itokosuke/.cargo
 #--------------------------
 

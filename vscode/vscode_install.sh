@@ -9,6 +9,9 @@ ln -s "$SCRIPT_DIR/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
 rm "$VSCODE_SETTING_DIR/keybindings.json"
 ln -s "$SCRIPT_DIR/keybindings.json" "${VSCODE_SETTING_DIR}/keybindings.json"
 
+rm -r "$VSCODE_SETTING_DIR/snippets"
+ln -s "$SCRIPT_DIR/snippets" "${VSCODE_SETTING_DIR}/snippets"
+
 # install extention
 cat extensions | while read line
 do
