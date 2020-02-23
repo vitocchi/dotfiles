@@ -57,8 +57,8 @@ function digno() {
 #--------------------------
 # nvim
 #--------------------------
-alias vi="nvim"
-alias vim="nvim"
+alias vi="vim"
+#alias vim="nvim"
 
 #--------------------------
 # atcoder
