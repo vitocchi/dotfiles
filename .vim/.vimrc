@@ -22,11 +22,18 @@ Plugin 'morhetz/gruvbox' " gruvbox
 call vundle#end()
 " 以上、Vundle設定-----------------
 
+" === gruvbox ===
+colorscheme gruvbox
+
+set background=dark
+set t_Co=256            " gruvboxをカラースキーマにするときに必要！
+let g:ligthline = { 'colorscheme': 'gruvbox' }
+" === gruvbox ===
+
 " General
 set number "行番号を表示
 set noswapfile "スワップファイルは使わない(逐次保存するので)
 syntax enable "シンタックスハイライト
-colorscheme gruvbox "カラースキーム
 filetype plugin indent on "ファイルタイプ検出、プラグイン、インデントの有効化
 set clipboard+=unnamed "clipboard
 
