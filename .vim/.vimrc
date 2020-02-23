@@ -15,12 +15,6 @@ Plugin 'scrooloose/nerdtree' "NERDTree
 Plugin 'tell-k/vim-autopep8' "Ptyhonをpep8に自動でフォーマットする
 Plugin 'scrooloose/syntastic' " 静的シンタックスチェック
 Plugin 'posva/vim-vue' "Vue.jsのシンタックスハイライト
-if has('lua') " lua機能が有効になっている場合・・・・・・①
-	Plugin 'stephpy/vim-yaml' "yaml
-	Plugin 'Shougo/neocomplete.vim' " neocomplete 
-	Plugin 'Shougo/neosnippet' " スニペットの補完機能
-	Plugin 'Shougo/neosnippet-snippets' " スニペット集
-endif
 
 " Color schemes
 Plugin 'morhetz/gruvbox' " gruvbox
@@ -79,8 +73,6 @@ set smartindent "改行時に入力された行の末尾に合わせて次の行
 autocmd FileType vue setlocal sw=2 sts=2 ts=2 et
 autocmd FileType js setlocal sw=2 sts=2 ts=2 et
 autocmd FileType javascript setlocal sw=2 sts=2 ts=2 et
-
-source ~/.vimrc.neocomplete "neocomplete用の設定
 
 " 検索するときに大文字小文字を区別しない
 set ignorecase
