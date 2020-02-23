@@ -19,6 +19,16 @@ Plugin 'posva/vim-vue' "Vue.jsのシンタックスハイライト
 " Color schemes
 Plugin 'morhetz/gruvbox' " gruvbox
 
+" deoplete
+if ((has('nvim')  || has('timers')) && has('python3')) && system('pip3 show neovim') !=# ''
+    Plugin 'Shougo/deoplete.nvim'
+    if !has('nvim')
+        Plugin 'roxma/nvim-yarp'
+        Plugin 'roxma/vim-hug-neovim-rpc'
+    endif
+endif
+
+
 call vundle#end()
 " 以上、Vundle設定-----------------
 
@@ -68,6 +78,9 @@ let g:syntastic_vue_checkers = ['eslint']
 " vim-autopep8
 let g:autopep8_on_save = 1 "ファイル保存時にフォーマットする
 let g:autopep8_disable_show_diff=1 "フォーマット前後の差分を表示しない
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " indentインデントの設定
 set expandtab "タブ入力を複数の空白入力に置き換える
