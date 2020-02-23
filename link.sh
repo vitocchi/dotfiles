@@ -1,8 +1,7 @@
 #!/bin/sh
-ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/.vimrc.common ~/.vimrc.common
-ln -sf ~/dotfiles/.vimrc.neocomplete ~/.vimrc.neocomplete
+ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/vim/.vimrc.neocomplete ~/.vimrc.neocomplete
+ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/vim/.vimrc.common ~/.vimrc.common
+sh ~/dotfiles/vscode/vscode_install.sh

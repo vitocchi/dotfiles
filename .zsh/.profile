@@ -1,5 +1,5 @@
 #--------------------------
-# 各種ライブラリ
+# PATHの設定
 #--------------------------
 export PATH=$PATH:/Users/itokosuke/.nodebrew/current/bin
 export PATH=$PATH:/Users/itokosuke/.composer/vendor/bin/laravel
@@ -12,8 +12,8 @@ export PATH=$PATH:/Users/itokosuke/pear/bin
 export PATH=$PATH:/Users/itokosuke/.cargo/bin
 export PATH=$PATH:/usr/local/heroku/bin
 export PATH=$PATH:/Uers/itokosuke/.cargo
-#--------------------------
 
+#--------------------------
 # PHP 開発用
 #--------------------------
 alias phpunit="XDEBUG_CONFIG="on" vendor/phpunit/phpunit/phpunit $@"
@@ -57,28 +57,6 @@ function digno() {
 } 
 
 #--------------------------
-# peco-ssh
-#--------------------------
-function peco-ssh () {
-  local selected_host=$(ls -d ~/.ssh/conf.d/* | xargs awk '
-  tolower($1)=="host" {
-    for (i=2; i<=NF; i++) {
-      if ($i !~ "[*?]") {
-        print $i
-      }
-    }
-  }
-  ' | sort | peco --query "$LBUFFER")
-  if [ -n "$selected_host" ]; then
-    BUFFER="ssh ${selected_host}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-ssh
-bindkey '^s' peco-ssh
-
-#--------------------------
 # nvim
 #--------------------------
 alias vi="nvim"
@@ -99,3 +77,25 @@ alias myip="curl inet-ip.info"
 # 大文字、小文字、数字、記号を含んだ12文字のパスワードを生成してクリップボードに保存する
 alias cpwgen="pwgen 12 -cny1 | pbcopy"
 #--------------------------
+
+#--------------------------
+# peco-ssh
+#--------------------------
+function peco-ssh () {
+  local selected_host=$(ls -d ~/.ssh/conf.d/* | xargs awk '
+  tolower($1)=="host" {
+    for (i=2; i<=NF; i++) {
+      if ($i !~ "[*?]") {
+        print $i
+      }
+    }
+  }
+  ' | sort | peco --query "$LBUFFER")
+  if [ -n "$selected_host" ]; then
+    BUFFER="ssh ${selected_host}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-ssh
+bindkey '^s' peco-ssh

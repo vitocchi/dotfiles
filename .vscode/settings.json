@@ -2,7 +2,7 @@
     "editor.fontFamily": "Ricty,Menlo, Monaco, 'Courier New', monospace",
     "workbench.colorTheme": "Monokai Classic",
     "workbench.editor.enablePreview": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.fontSize": 14,
 
     // vim のキーマップ
