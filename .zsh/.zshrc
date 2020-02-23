@@ -4,4 +4,4 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Source Custome profile.
-[[ -e ~/dotfiles/.profile ]] && emulate sh -c 'source ~/dotfiles/.profile'
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
