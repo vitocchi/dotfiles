@@ -93,5 +93,6 @@ set incsearch
 " keymap
 inoremap jk <esc>:w<CR> "挿入モード時、jkでノーマルモードに戻る
 
-map leader = "\<Space>" "leaderキーをspaceにする
-nnoremap <Leader>w :w<CR> "space+wで保存する
+" 有効にすると右へのカーソル移動が遅くなる
+"map leader = "\<Space>" "leaderキーをspaceにする
+"nnoremap <Leader>w :w<CR> "space+wで保存する

@@ -97,3 +97,8 @@ function peco-ssh () {
 }
 zle -N peco-ssh
 bindkey '^s' peco-ssh
+
+#------------------------
+# git
+#-----------------------
+alias g='git'
