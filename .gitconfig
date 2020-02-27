@@ -49,6 +49,7 @@
     s = status --short --branch
     st = status 
     today = log --oneline --since='12 hour ago'
+    dlall = !git branch --merged | grep -vE 'master$|develop$' | xargs -I % git branch -d %
     relnote = log --merges --first-parent --reverse --pretty=format:'- [ ] %h %B\n' remotes/origin/master..remotes/origin/develop
 
 # git-browse-remote

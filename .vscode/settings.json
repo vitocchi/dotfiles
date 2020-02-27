@@ -2,7 +2,7 @@
     "editor.fontFamily": "Ricty,Menlo, Monaco, 'Courier New', monospace",
     "workbench.colorTheme": "Gruvbox Dark Soft",
     "workbench.editor.enablePreview": false,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "editor.fontSize": 14,
 
     // vim のキーマップ
@@ -30,6 +30,17 @@
                 {
                     "command": "workbench.action.files.save",
                     "args": []
+                }
+            ]
+        },
+        // g + d でgo to definition
+        {
+            "before": ["g", "d"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.revealDefinition",
+                    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
                 }
             ]
         }

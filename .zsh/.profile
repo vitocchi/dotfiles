@@ -57,6 +57,7 @@ function digno() {
 #--------------------------
 # nvim
 #--------------------------
+alias v="vim"
 alias vi="vim"
 #alias vim="nvim"
 
@@ -102,3 +103,8 @@ bindkey '^s' peco-ssh
 # git
 #-----------------------
 alias g='git'
+
+#------------------------
+# vscode
+#------------------------
+alias c='code'
