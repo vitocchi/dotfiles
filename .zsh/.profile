@@ -102,9 +102,12 @@ bindkey '^s' peco-ssh
 #------------------------
 # git
 #-----------------------
+alias g='hub'
 eval "$(hub alias -s)"
 
 #------------------------
 # vscode
 #------------------------
 alias c='code'
+
+export PATH="$HOME/.cargo/bin:$PATH"
