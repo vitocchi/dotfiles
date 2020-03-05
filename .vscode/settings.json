@@ -33,6 +33,17 @@
                 }
             ]
         },
+        // leader + ; で行末に";"を挿入
+        {
+            "before": ["leader",";"],
+            "after": ["A", ";", "<Esc>"],
+            "commands": [
+                {
+                    "command": "cursorEnd",
+                    "args": []
+                }
+            ]
+        },
         // g + d でgo to definition
         {
             "before": ["g", "d"],
@@ -40,6 +51,17 @@
             "commands": [
                 {
                     "command": "editor.action.revealDefinition",
+                    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+                }
+            ]
+        },
+        // g + e でgo to references
+        {
+            "before": ["g", "r"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.referenceSearch.trigger",
                     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
                 }
             ]
