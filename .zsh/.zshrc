@@ -19,3 +19,4 @@ compinit
 
 # Source Custome profile.
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"

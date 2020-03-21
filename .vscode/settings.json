@@ -1,6 +1,5 @@
 {
     "editor.fontFamily": "Ricty,Menlo, Monaco, 'Courier New', monospace",
-    "workbench.colorTheme": "Gruvbox Dark Soft",
     "workbench.editor.enablePreview": false,
     "window.zoomLevel": 0,
     "editor.fontSize": 14,
@@ -68,6 +67,8 @@
         }
     ],
     "vim.incsearch": true,
+    "vim.statusBarColorControl": false,
+    "editor.quickSuggestions": true,
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
@@ -78,7 +79,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "go.useLanguageServer": true,
-    "go.gopath": "/Users/itokosuke/go",
+    "go.gopath": "/Users/vitocchi/go",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
@@ -90,4 +91,5 @@
     "editor.minimap.enabled": false,
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
 }

@@ -12,6 +12,7 @@ export PATH=$PATH:$HOME/pear/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.cargo
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.local/bin
 
 #--------------------------
 # PHP 開発用
@@ -35,8 +36,15 @@ alias initMakefile="wget https://raw.githubusercontent.com/vitocchi/go-makefile-
 #--------------------------
 #rbenv(Ruby)
 #--------------------------
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
 
+#--------------------------
+#python
+#--------------------------
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init -)"
 
 #--------------------------
 # docker 
