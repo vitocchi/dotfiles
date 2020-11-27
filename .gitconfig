@@ -82,3 +82,5 @@
 [user]
 	name = vitocchi
 	email = vitocchi.mm@gmail.com
+[hub]
+    protocol = ssh
