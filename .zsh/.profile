@@ -6,7 +6,6 @@ export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
 export PATH=$PATH:/usr/local/opt/openssl@1.1/bin
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
-export PATH=$PATH:$HOME/private/grin
 export PATH=$PATH:$HOME/.rbenv/bin
 export PATH=$PATH:$HOME/pear/bin
 export PATH=$PATH:$HOME/.cargo/bin
@@ -33,18 +32,14 @@ export GO111MODULE=on
 alias cdgo="cd $HOME/go/src/github.com/aerialpartners"
 alias initMakefile="wget https://raw.githubusercontent.com/vitocchi/go-makefile-temp/master/Makefile"
 
-#--------------------------
-#rbenv(Ruby)
-#--------------------------
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-eval "$(rbenv init -)"
 
 #--------------------------
 #python
 #--------------------------
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init -)"
+# pyenv -> nodebrew 的な
+export PATH="$(pyenv root)/shims:$PATH"
+#export PYENV_ROOT="$HOME/.pyenv"
+#eval "$(pyenv init -)"
 
 #--------------------------
 # docker 
@@ -63,16 +58,10 @@ function digno() {
 } 
 
 #--------------------------
-# nvim
+# vim
 #--------------------------
 alias v="vim"
 alias vi="vim"
-#alias vim="nvim"
-
-#--------------------------
-# atcoder
-#--------------------------
-alias initat="git clone https://github.com/vitocchi/atcoder-rust-temp.git"
 
 #--------------------------
 # global ip　確認
@@ -89,7 +78,7 @@ alias cpwgen="pwgen 12 -cny1 | pbcopy"
 # peco-ssh
 #--------------------------
 function peco-ssh () {
-  local selected_host=$(ls -d ~/.ssh/conf.d/* | xargs awk '
+  local selected_host=$(ls -d ~/.ssh/config | xargs awk '
   tolower($1)=="host" {
     for (i=2; i<=NF; i++) {
       if ($i !~ "[*?]") {
@@ -118,4 +107,8 @@ eval "$(hub alias -s)"
 #------------------------
 alias c='code'
 
-export PATH="$HOME/.cargo/bin:$PATH"
+#-----------------------
+# multiuser homebrew
+#-----------------------
+#umask 0022 を umask 0002 に変更し、新しく作成したファイルにgroup writeパーミッションがつくようにする
+umask 0002

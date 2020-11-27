@@ -1,15 +1,22 @@
 {
-    "editor.fontFamily": "Ricty,Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "Hackgen, Ricty,Menlo, Monaco, 'Courier New', monospace",
     "workbench.editor.enablePreview": false,
     "window.zoomLevel": 0,
     "editor.fontSize": 14,
-
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
     // vim のキーマップ
     "vim.insertModeKeyBindings": [
         // jkでノーマルモードにエスケープしてほぞんする
         {
-            "before": ["j","k"],
-            "after": ["<Esc>"],
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ],
             "commands": [
                 {
                     "command": "workbench.action.files.save",
@@ -23,7 +30,10 @@
     "vim.normalModeKeyBindings": [
         // leader + w で保存
         {
-            "before": ["leader","w"],
+            "before": [
+                "leader",
+                "w"
+            ],
             "after": [],
             "commands": [
                 {
@@ -34,8 +44,15 @@
         },
         // leader + ; で行末に";"を挿入
         {
-            "before": ["leader",";"],
-            "after": ["A", ";", "<Esc>"],
+            "before": [
+                "leader",
+                ";"
+            ],
+            "after": [
+                "A",
+                ";",
+                "<Esc>"
+            ],
             "commands": [
                 {
                     "command": "cursorEnd",
@@ -45,7 +62,10 @@
         },
         // g + d でgo to definition
         {
-            "before": ["g", "d"],
+            "before": [
+                "g",
+                "d"
+            ],
             "after": [],
             "commands": [
                 {
@@ -56,7 +76,10 @@
         },
         // g + e でgo to references
         {
-            "before": ["g", "r"],
+            "before": [
+                "g",
+                "r"
+            ],
             "after": [],
             "commands": [
                 {
@@ -69,17 +92,26 @@
     "vim.incsearch": true,
     "vim.statusBarColorControl": false,
     "editor.quickSuggestions": true,
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
     "[rust]": {
+        "editor.formatOnSave": true
+    },
+    "[java]": {
         "editor.formatOnSave": true
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "go.useLanguageServer": true,
     "go.gopath": "/Users/vitocchi/go",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast",
+        "--config=~/.golangci.yaml",
+    ],
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
@@ -87,9 +119,15 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "maven.terminal.useJavaHome": true,
     "terminal.integrated.fontSize": 14,
-    "workbench.iconTheme": "Monokai Classic Icons",
+    "workbench.iconTheme": "vscode-icons",
     "editor.minimap.enabled": false,
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Gruvbox Dark Hard",
+    "python.jediEnabled": false,
+    "eslint.format.enable": true,
+    "java.semanticHighlighting.enabled": true,
+    "cSpell.userWords": [
+        "typeorm"
+    ]
 }
