@@ -122,12 +122,7 @@
     "workbench.iconTheme": "vscode-icons",
     "editor.minimap.enabled": false,
     "vsicons.dontShowNewVersionMessage": true,
-    "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Gruvbox Dark Hard",
-    "python.jediEnabled": false,
     "eslint.format.enable": true,
     "java.semanticHighlighting.enabled": true,
-    "cSpell.userWords": [
-        "typeorm"
-    ]
 }
