@@ -1,128 +1,125 @@
 {
-    "editor.fontFamily": "Hackgen, Ricty,Menlo, Monaco, 'Courier New', monospace",
-    "workbench.editor.enablePreview": false,
-    "window.zoomLevel": 0,
-    "editor.fontSize": 14,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
-    // vim のキーマップ
-    "vim.insertModeKeyBindings": [
-        // jkでノーマルモードにエスケープしてほぞんする
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[java]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[rust]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.fontFamily": "Hackgen, Ricty,Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "other": "on",
+    "strings": "on"
+  },
+  "editor.suggestSelection": "first",
+  "eslint.format.enable": true,
+  "go.gopath": "/Users/vitocchi/go",
+  "go.lintFlags": [
+    "--fast",
+    "--config=~/.golangci.yaml"
+  ],
+  "go.lintTool": "golangci-lint",
+  "go.useLanguageServer": true,
+  "java.semanticHighlighting.enabled": true,
+  "maven.terminal.useJavaHome": true,
+  "terminal.integrated.fontSize": 14,
+  "vim.incsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "after": [
+        "<Esc>"
+      ],
+      "before": [
+        "j",
+        "k"
+      ],
+      "commands": [
         {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
+          "args": [],
+          "command": "workbench.action.files.save"
         }
-    ],
-    // leaderをスペースに設定する
-    "vim.leader": "<space>",
-    "vim.normalModeKeyBindings": [
-        // leader + w で保存
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindings": [
+    {
+      "after": [],
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
         {
-            "before": [
-                "leader",
-                "w"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        },
-        // leader + ; で行末に";"を挿入
-        {
-            "before": [
-                "leader",
-                ";"
-            ],
-            "after": [
-                "A",
-                ";",
-                "<Esc>"
-            ],
-            "commands": [
-                {
-                    "command": "cursorEnd",
-                    "args": []
-                }
-            ]
-        },
-        // g + d でgo to definition
-        {
-            "before": [
-                "g",
-                "d"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.revealDefinition",
-                    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-                }
-            ]
-        },
-        // g + e でgo to references
-        {
-            "before": [
-                "g",
-                "r"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.referenceSearch.trigger",
-                    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-                }
-            ]
+          "args": [],
+          "command": "workbench.action.files.save"
         }
-    ],
-    "vim.incsearch": true,
-    "vim.statusBarColorControl": false,
-    "editor.quickSuggestions": true,
-    "[rust]": {
-        "editor.formatOnSave": true
+      ]
     },
-    "[java]": {
-        "editor.formatOnSave": true
+    {
+      "after": [
+        "A",
+        ";",
+        "<Esc>"
+      ],
+      "before": [
+        "leader",
+        ";"
+      ],
+      "commands": [
+        {
+          "args": [],
+          "command": "cursorEnd"
+        }
+      ]
     },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+    {
+      "after": [],
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.revealDefinition",
+          "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        }
+      ]
     },
-    "[typescript]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "go.useLanguageServer": true,
-    "go.gopath": "/Users/vitocchi/go",
-    "go.lintTool": "golangci-lint",
-    "go.lintFlags": [
-        "--fast",
-        "--config=~/.golangci.yaml",
-    ],
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "maven.terminal.useJavaHome": true,
-    "terminal.integrated.fontSize": 14,
-    "workbench.iconTheme": "vscode-icons",
-    "editor.minimap.enabled": false,
-    "vsicons.dontShowNewVersionMessage": true,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
-    "eslint.format.enable": true,
-    "java.semanticHighlighting.enabled": true,
+    {
+      "after": [],
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.referenceSearch.trigger",
+          "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        }
+      ]
+    }
+  ],
+  "vim.statusBarColorControl": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Gruvbox Dark (Hard)",
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "vscode-icons"
 }

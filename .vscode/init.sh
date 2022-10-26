@@ -1,25 +1,4 @@
 #!/bin/sh
-# https://qiita.com/miiina016/items/018331b36ecf57ed8973
-
-SCRIPT_DIR=$(cd $(dirname $0) && pwd)
-VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
-
-echo "Linking settings.json"
-rm "$VSCODE_SETTING_DIR/settings.json"
-ln -s "$SCRIPT_DIR/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
-
-echo "Linking keybindings.json"
-rm "$VSCODE_SETTING_DIR/keybindings.json"
-ln -s "$SCRIPT_DIR/keybindings.json" "${VSCODE_SETTING_DIR}/keybindings.json"
-
-echo "Linking snippets"
-rm -r "$VSCODE_SETTING_DIR/snippets"
-ln -s "$SCRIPT_DIR/snippets" "${VSCODE_SETTING_DIR}/snippets"
-
-# install extention
-cat extensions | while read line
-do
- code --install-extension $line
-done
-
-code --list-extensions > extensions
+sh install_extensions.sh
+sh export_extensions.sh
+sh link_setting_file.sh

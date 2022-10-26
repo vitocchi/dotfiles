@@ -37,9 +37,9 @@ alias initMakefile="wget https://raw.githubusercontent.com/vitocchi/go-makefile-
 #python
 #--------------------------
 # pyenv -> nodebrew 的な
-export PATH="$(pyenv root)/shims:$PATH"
-#export PYENV_ROOT="$HOME/.pyenv"
-#eval "$(pyenv init -)"
+# export PATH="$(pyenv root)/shims:$PATH"
+# export PYENV_ROOT="$HOME/.pyenv"
+# eval "$(pyenv init -)"
 
 #--------------------------
 # docker 
@@ -106,9 +106,3 @@ eval "$(hub alias -s)"
 # vscode
 #------------------------
 alias c='code'
-
-#-----------------------
-# multiuser homebrew
-#-----------------------
-#umask 0022 を umask 0002 に変更し、新しく作成したファイルにgroup writeパーミッションがつくようにする
-umask 0002
